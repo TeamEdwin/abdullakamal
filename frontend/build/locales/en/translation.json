@@ -1,0 +1,177 @@
+{
+  "header": {
+    "label_home": "Home",
+    "label_aboutUs": "About Us",
+    "label_ourDepartments": "Our Departments",
+    "label_ourDoctors": "Our Doctors",
+    "label_insuranceProviders": "Insurance Providers",
+    "label_packages": "Packages",
+    "label_contactUs": "Contact Us"
+  },
+  "sticky-chat": {
+    "label_AKMC": "Dr. Abdulla Kamal Medical Center",
+    "label_replyTime": "Typically replies within 1 day.",
+    "label_replyMessage": "Hi, there! 👋 <br /> How can I help you?",
+    "label_startChat": "Start Chat"
+  },
+  "sticky-menu": {
+    "label_findADoctor": "Find a doctor",
+    "label_scheduleAppointment": "Schedule Appointment",
+    "label_packages": "Packages",
+    "label_e-payment": "E-Payment"
+  },
+  "home": {
+    "gallery": {
+      "title": "Gallery",
+      "label_btn_showMore": "Show More"
+    },
+    "doctor": {
+      "label_ourDoctors": "Our Doctors",
+      "btnLabel_consultNow": "CONSULT NOW"
+    },
+    "healthFitness": {
+      "title": "Health Fitness",
+      "subtitle": "Health Fitness Periodic Health Checkup For",
+      "lable_btn_readMore": "READ MORE"
+    },
+    "hero-main": {
+      "heading": "Affordable Health Care",
+      "subheading": "If you are looking for a clinic providing best quality health care at affordable and reasonable prices, you came to the right place.",
+      "label_years": "YEARS",
+      "label_since": "SINCE",
+      "label_departments": "DEPARTMENTS"
+    },
+    "hero-services": {
+      "title": "Checkups & Services",
+      "subtitle": "If you are looking for a clinic providing best quality health care at affordable and reasonable prices, you came to the right place.",
+      "block_1": "Medicine is a field with a strong history of creativity. Our doctors go beyond the normal standardization of an algorithmic approach to diagnosis and treatment and focus more on how to provide you the best care. We adapt to your needs and not the other way around.",
+      "block_2": "Dr. Abdulla Kamal Clinic has been around for 40 years. We have years of experience treating conditions from the common to the rare. Our reach is broad, we’ve treated people from every corner of the world, and those people tell us they are highly satisfied with their",
+      "block_3": "Dr. Abdulla Kamal Clinic has been around for 40 years. We have years of experience treating conditions from the common to the rare. Our reach is broad, we’ve treated people from every corner of the world, and those people tell us they are highly satisfied with their",
+      "block_4": "Our qualified general practitioners are available 24/7 to help you with advice and quick consultations. You can be rest assured that for all your needs we will be available 365 days a year."
+    },
+    "insuranceProviders": {
+      "title": "Insurance Providers",
+      "subtitle": "Here are the Insurance companies contracted with Dr. Abdulla Kamal Medical Centre are."
+    },
+    "testimonials": {
+      "title": "Here’s What Our Patients Are Saying",
+      "subtitle": "“Patients First” is the guiding principle of Dr. Abdulla Kamal Medical Centre. Every day we strive to provide outstanding and compassionate care and service to our patients. Our goal is twofold - improve the health and experience of our patients. Hear directly from our patients about their Dr. Abdulla Kamal Medical Centre experience."
+    },
+    "specialties": {
+      "label_specialties": "Specialties",
+      "description": "This section highlights the specialized centers which includes in each one of them a comprehensive medical services in one place that will provide an easy and smooth experience."
+    }
+  },
+  "about": {
+    "aboutUs": {
+      "title": "About Us"
+    },
+    "messageFromFounder": {
+      "title": "Message From Founder"
+    },
+    "messageFromAKMC": {
+      "title": "Message"
+    },
+    "vision": {
+      "title": "Vision"
+    },
+    "mission": {
+      "title": "Mission"
+    },
+    "values": {
+      "title": "Values"
+    },
+    "goals": {
+      "title": "Goals"
+    }
+  },
+  "ourDepartments": {
+    "title": "All Departments",
+    "deparmtmentDetails": {
+      "label_addressTheFollowingCases": "Address the following cases:",
+      "label_ourDoctors": "Our Doctors"
+    }
+  },
+  "ourDoctors": {
+    "title": "Our Doctors",
+    "doctorDetails": {
+      "label_qualification": "Qualifications:",
+      "label_btn_bookAnAppointment": "Book An Appointment"
+    }
+  },
+  "insuranceProviders": {
+    "title": "Insurance Providers"
+  },
+  "packages": {
+    "title": "Packages & Offers",
+    "packageDetails": {
+      "label_btn_packagePrice": "Package Price"
+    }
+  },
+  "e-payment": {
+    "label_personalInformation": "Personal Information",
+    "label_form_fullName": "Full Name:*",
+    "label_form_phoneMobile": "Phone / Mobile:",
+    "label_form_email": "Email Address:",
+    "label_serviceInformation": "Service Information",
+    "label_service": "Service:*",
+    "label_doctor": "Doctor:",
+    "label_paymentInformation": "Payment Information",
+    "label_cardNumber": "Card Number:*",
+    "label_expirationDate": "Expiration Date:*",
+    "label_cardHolderName": "Card Holder's Name:*",
+    "label_pay": "Pay",
+    "label_comingSoon": "Coming soon..."
+  },
+  "contactUs": {
+    "title": "GET IN TOUCH",
+    "form": {
+      "label_firstName": "Full Name: (Optional)",
+      "label_mobileNumber": "Mobile Number:",
+      "label_message": "Message",
+      "label_btn_send": "SEND"
+    }
+  },
+  "findADoctor": {
+    "label_requestAppointment": "Request An Appointment",
+    "label_findADoctor": "Find a Doctor",
+    "label_quickSearch": "Quick Search",
+    "label_quickSearch_description": "Our team of International doctors combine a formidable spread of expertise and experience with one shared mission: To provide patients with the highest possible standards of care and medical expertise.",
+    "label_form_department": "Department",
+    "label_form_doctorName": "Doctor's Name:"
+  },
+  "requestAppointment": {
+    "label_requestAppointment": "Request An Appointment",
+    "label_findADoctor": "Find a Doctor",
+    "label_personalInformation": "Personal Information",
+    "label_form_fullName": "Full Name:*",
+    "label_form_phoneMobile": "Phone / Mobile:",
+    "label_form_email": "Email Address:",
+    "label_scheduleAppointment": "Schedule Appointment",
+    "label_form_department": "Department",
+    "label_form_doctorName": "Doctor's Name:",
+    "label_form_appointmentDate": "Appointment Date:*",
+    "label_form_appointmentTime": "Appointment Time:*",
+    "label_btn_checkAvailability": "CHECK AVAILABILITY"
+  },
+  "blog": {
+    "label_whatsHot": "What's Hot",
+    "label_btn_readMore": "READ MORE"
+  },
+  "footer": {
+    "label_aboutUs": "About Us",
+    "label_ourDepartments": "Our Departments",
+    "label_findADoctor": "Find a Doctor",
+    "label_packagesAndOffer": "Packages and Offer",
+    "label_insuranceProvider": "Insurance Providers",
+    "label_healthInformation": "Health Information",
+    "label_patientSymptoms": "Patient Symptoms",
+    "label_news": "News",
+    "label_gallery": "Gallery",
+    "label_admin": "Admin",
+    "label_contactUs": "Contact Us",
+    "label_patients": "Patients and Visitors",
+    "label_privacy": "Privacy",
+    "label_termsConditions": "Terms & Conditions"
+  }
+}

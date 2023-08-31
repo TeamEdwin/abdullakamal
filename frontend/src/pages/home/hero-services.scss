@@ -1,0 +1,47 @@
+@import "../../styles/themes";
+@import "../../styles/grid";
+@import "../../styles/typography";
+@import "../../styles/components";
+
+.hero-services {
+  background-color: $color-primary-dark;
+  background-image: linear-gradient(
+      rgba($color-primary-dark, 0.6),
+      rgba($color-primary-dark, 0.6)
+    ),
+    url("/assets/artworks/pexels-karolina-grabowska-4021779.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding: 10rem 0;
+
+  &--title {
+    text-align: center;
+    color: $color-white;
+  }
+
+  &--body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 5rem !important;
+
+    &-item {
+      color: $color-white;
+      width: 30rem;
+      padding: 2.5rem;
+      text-align: center;
+
+      @include respond(phone) {
+        width: 42rem;
+      }
+
+      .icon_service {
+        fill: $color-white;
+        height: 10rem;
+        margin: 3rem 0;
+      }
+    }
+  }
+}

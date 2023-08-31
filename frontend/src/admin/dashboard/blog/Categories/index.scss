@@ -1,0 +1,12 @@
+@import "../../../../styles/mixins";
+
+.Categories__Add {
+    &-grid {
+        padding-right: 2rem;
+
+        @include respond(tab-port) {
+            padding-right: 0;
+            margin-bottom: 2rem;
+        }
+    }
+}

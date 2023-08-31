@@ -1,0 +1,367 @@
+@import "../../styles/themes";
+@import "../../styles/grid";
+@import "../../styles/typography";
+@import "../../styles/components";
+
+.aboutus {
+  position: relative;
+  overflow: hidden;
+
+  &-art__container {
+    &--art1 {
+      position: absolute;
+      height: 50rem;
+      z-index: -9999;
+      top: -5rem;
+      left: -15rem;
+
+      @include respond(tab-land) {
+        left: -18rem;
+      }
+
+      @include respond(phone) {
+        top: -10rem;
+        left: -18rem;
+      }
+    }
+
+    &--art2 {
+      position: absolute;
+      overflow: hidden;
+      height: 80rem;
+      z-index: -9999;
+      top: 5rem;
+      right: -45rem;
+
+      @include respond(tab-land) {
+        right: -50rem;
+      }
+    }
+
+    &--art3 {
+      position: absolute;
+      height: 80rem;
+      z-index: -9999;
+      top: 35%;
+      left: -35%;
+
+      @include respond(tab-port) {
+        left: -60%;
+      }
+
+      @include respond(phone) {
+        top: 20%;
+        left: -110%;
+      }
+    }
+
+    &--art4 {
+      position: absolute;
+      height: 60rem;
+      z-index: -9999;
+      top: 80rem;
+      right: -30rem;
+
+      @include respond(phone) {
+        top: 125rem;
+      }
+    }
+  }
+
+  &__container {
+    margin: 15rem auto 5rem auto;
+
+    &--img {
+      height: 35rem;
+      float: right;
+      margin: 0 0 2rem 2rem;
+
+      @include respond(phone) {
+        max-height: 30rem;
+        float: none;
+        display: block;
+        margin: 0 auto 2rem auto;
+      }
+    }
+  }
+}
+
+.msg-founder {
+  &__container {
+    min-height: 40rem;
+
+    &--img {
+      height: 35rem;
+      float: right;
+      margin: 0 0 0 3rem;
+
+      @include respond(phone) {
+        max-height: 30rem;
+        float: none;
+        display: block;
+        margin: 0 auto 2rem auto;
+      }
+    }
+
+    &--akmclogo {
+      display: block;
+      text-align: center;
+      height: 15rem;
+      padding: 2rem;
+      margin: 2rem auto 4rem auto;
+    }
+  }
+}
+
+.impt-points {
+  background-color: $color-primary-dark;
+  color: $color-white;
+  font-size: 2rem;
+  line-height: 2;
+  margin: 5rem 0;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &--left {
+      background-image: linear-gradient(
+          rgba($color-primary-dark, 0.4),
+          rgba($color-primary-dark, 0.4)
+        ),
+        url("/assets/artworks/Clinic-1(2).png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+      padding: 20rem 15rem 20rem 3rem;
+      flex: 0 0 40%;
+
+      @include respond(tab-port) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        min-height: 50rem;
+      }
+    }
+
+    &--right {
+      padding: 10rem;
+      white-space: pre;
+
+      @include respond(phone) {
+        padding: 8rem 2rem;
+      }
+
+      ul {
+        list-style: none;
+      }
+    }
+  }
+}
+
+.quote {
+  &__container {
+    margin: 10rem auto;
+    padding: 0 7rem;
+    position: relative;
+
+    &--ldquo,
+    &--rdquo {
+      font-family: serif;
+      font-size: 10rem;
+      line-height: 1rem;
+      position: absolute;
+    }
+
+    &--ldquo {
+      top: 2.5rem;
+      left: 1.7rem;
+    }
+
+    &--rdquo {
+      bottom: -1rem;
+    }
+  }
+}
+
+.msg-akmc {
+  background-image: linear-gradient(
+    to bottom left,
+    $color-primary,
+    $color-white
+  );
+  position: relative;
+  overflow: hidden;
+
+  &-art__container {
+    &--art1 {
+      position: absolute;
+      height: 40rem;
+      z-index: 1;
+      top: 0rem;
+      left: -25rem;
+
+      @include respond(tab-port) {
+        top: -10rem;
+        left: -30rem;
+      }
+    }
+
+    &--art2 {
+      position: absolute;
+      height: 40rem;
+      z-index: 1;
+      top: 20rem;
+      left: -25rem;
+
+      @include respond(tab-port) {
+        top: 30rem;
+      }
+    }
+
+    &--art3 {
+      position: absolute;
+      height: 10rem;
+      z-index: 1;
+      top: 5rem;
+      left: 60rem;
+
+      @include respond(tab-land) {
+        left: 40rem;
+      }
+      @include respond(tab-port) {
+        top: 30rem;
+        left: 40rem;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &--text {
+      padding: 12rem 5rem 12rem 0;
+      z-index: 200;
+
+      @include respond(tab-port) {
+        padding: 5rem 3rem 0 0;
+      }
+    }
+
+    &--image {
+      padding: 5rem 0;
+      margin: 0 auto;
+      z-index: 200;
+
+      .image {
+        max-height: 40rem;
+
+        @include respond(phone) {
+          max-height: 30rem;
+        }
+      }
+    }
+  }
+}
+
+.vm {
+  background-color: $color-purple;
+
+  &__container {
+    padding: 3rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &--vision,
+    &--mission {
+      padding: 3rem;
+    }
+  }
+}
+
+.values {
+  text-align: center;
+  margin: 10rem auto;
+}
+
+.goals {
+  background-color: $color-primary-dark;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &--left {
+      padding: 20rem 15rem 20rem 3rem;
+      flex: 0 0 40%;
+
+      background-image: linear-gradient(
+          rgba($color-primary-dark, 0.4),
+          rgba($color-primary-dark, 0.4)
+        ),
+        url("/assets/artworks/pexels-pavel-danilyuk-6753427.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+
+      @include respond(tab-port) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        min-height: 60rem;
+      }
+    }
+
+    &--right {
+      padding: 10rem;
+
+      @include respond(phone) {
+        padding: 6rem 2rem;
+      }
+
+      ul {
+        list-style: none;
+      }
+    }
+  }
+}
+
+.rights {
+  &__container {
+    margin: 10rem auto;
+
+    &--text {
+      padding-bottom: 3rem;
+      display: flex;
+      flex-direction: row;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+
+      &-title {
+        min-width: 45rem;
+      }
+
+      &-desc {
+        flex: 1;
+      }
+    }
+  }
+}

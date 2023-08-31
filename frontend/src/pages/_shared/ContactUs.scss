@@ -1,0 +1,60 @@
+@import "../../styles/mixins";
+@import "../../styles/themes";
+
+.contactUs {
+  background-image: url("../../assets/artworks/artwork-pexels-pew-nguyen-239548.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 77rem;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    &-left {
+      min-width: 50%;
+      padding: 15rem 5rem 5rem;
+
+      @include respond(tab-port) {
+        padding: 15rem 4rem 5rem 2rem;
+      }
+
+      .contactUs-address {
+        flex: initial;
+        flex-wrap: wrap;
+      }
+
+      .socialMediaIcons {
+        margin: 0;
+        margin-left: 1.5rem;
+      }
+    }
+
+    &-right {
+      min-width: 50%;
+      padding: 15rem 5rem 5rem;
+
+      @include respond(tab-port) {
+        padding: 3rem 4rem 10rem 2rem;
+      }
+
+      form div label input,
+      textarea {
+        margin: 0.5rem 0 3rem;
+      }
+
+      .message {
+        background-color: $color-purple;
+        color: $color-white;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 2rem 3rem 1rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

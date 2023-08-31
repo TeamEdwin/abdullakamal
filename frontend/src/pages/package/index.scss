@@ -1,0 +1,166 @@
+@import "../../styles/mixins";
+@import "../../styles/themes";
+
+.package {
+
+  // backgroundImage: `url("${backgroundImgUrl}")`,
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60rem;
+  position: relative;
+
+  @include respond(phone) {
+    max-height: 40rem;
+  }
+
+  &__img-box {
+    text-align: center;
+
+    &--artwork {
+      margin-top: 2.5rem;
+      height: 50rem;
+
+      @include respond(tab-port) {
+        height: 40rem;
+      }
+
+      @include respond(phone) {
+        height: 28rem;
+      }
+
+      @include respond(sm-phone) {
+        height: 23rem;
+      }
+    }
+  }
+
+  &__text-box {
+    color: $color-white !important;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include respond(tab-land) {
+      width: 40%;
+    }
+
+    @include respond(tab-port) {
+      width: 48%;
+    }
+
+    @include respond(phone) {
+      width: 60%;
+      top: 32%;
+    }
+
+    @include respond(sm-phone) {
+      width: 60%;
+      top: 32%;
+    }
+  }
+}
+
+.package-features {
+  padding: 5rem 0;
+
+  &--body {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    &-desc {
+      color: $color-primary-dark;
+      min-width: 50%;
+    }
+
+    &-price {
+      min-width: 50%;
+
+      @include respond(phone) {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul {
+    color: $color-purple;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    margin: 8rem 0 1.5rem;
+  }
+
+  ul {
+    padding-left: 3rem;
+  }
+}
+
+.packageAll {
+  padding: 10rem 0 15rem;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.cardContainer {
+  margin: 2rem 2rem 2rem 0;
+
+  .packageAllCard {
+    background-image: linear-gradient(
+      to right,
+      rgba($color-primary-dark, 0.8),
+      rgba($color-secondary, 0.8)
+    );
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+    transition: 0.2s;
+    width: 39rem;
+    height: 15rem;
+
+    &:hover {
+      box-shadow: $box-shadow-light;
+    }
+
+    &__content {
+      color: $color-white;
+      width: 25rem;
+      padding: 1.6rem;
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+
+    .image {
+      width: 15rem;
+
+      img {
+        width: 100%; /* or any custom size */
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+      }
+    }
+  }
+}

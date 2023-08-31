@@ -1,0 +1,18 @@
+@import "../../styles/themes";
+
+.instagram {
+  padding: 10rem 0 !important;
+
+  &__icon {
+    fill: $color-gray;
+    height: 6rem;
+    margin-bottom: 5rem;
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}

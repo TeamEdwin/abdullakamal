@@ -1,0 +1,146 @@
+@import "../../styles/themes";
+@import "../../styles/mixins";
+
+.findDoctor {
+  position: relative;
+  overflow: hidden;
+
+  &-art__container {
+    &--art1 {
+      position: absolute;
+      overflow: hidden;
+      height: 75rem;
+      z-index: -9999;
+      top: -15rem;
+      right: -30rem;
+
+      @include respond(tab-land) {
+        height: 65rem;
+        right: -40rem;
+      }
+    }
+    &--art2 {
+      position: absolute;
+      overflow: hidden;
+      height: 70rem;
+      z-index: -9999;
+      top: -35rem;
+      right: -30rem;
+
+      @include respond(tab-land) {
+        height: 65rem;
+        right: -35rem;
+      }
+    }
+
+    &--art3 {
+      position: absolute;
+      height: 50rem;
+      z-index: -9999;
+      bottom: -10rem;
+      left: -15rem;
+
+      @include respond(tab-land) {
+        height: 40rem;
+        left: -18rem;
+      }
+
+      @include respond(phone) {
+        left: -18rem;
+      }
+    }
+  }
+
+  &-title {
+    text-align: center;
+    margin: 10rem 0 5rem;
+
+    h1 {
+      display: inline-block;
+      margin: 1rem 0;
+      cursor: pointer;
+      font-size: 3.2rem;
+
+      @include respond(tab-port) {
+        font-size: 2.6rem;
+      }
+
+      @include respond(phone) {
+        display: block;
+      }
+
+      @include respond(sm-phone) {
+        font-size: 2rem;
+      }
+    }
+
+    .divider {
+      font-weight: 300;
+      cursor: default;
+      margin: 0 10rem;
+
+      @include respond(tab-port) {
+        margin: 0 5rem;
+      }
+
+      @include respond(phone) {
+        margin: 0 1rem;
+      }
+    }
+
+    .inactive {
+      color: #b1b1b1;
+      text-decoration: none;
+    }
+  }
+
+  &__container {
+    background-color: $color-primary-dark;
+    margin-bottom: 10rem;
+    padding: 6rem 10rem;
+
+    @include respond(tab-port) {
+      padding: 8rem;
+    }
+
+    @include respond(phone) {
+      padding: 5rem 3rem;
+    }
+
+    &--desc {
+      font-size: 1.3rem;
+      margin-bottom: 5rem;
+    }
+
+    &--select {
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: row;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+
+      label {
+        min-width: 15rem;
+      }
+
+      &-menu {
+        flex: 1;
+
+        @include respond(phone) {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    &--footer {
+      margin-top: 3rem;
+      text-align: right;
+
+      @include respond(phone) {
+        text-align: center;
+      }
+    }
+  }
+}

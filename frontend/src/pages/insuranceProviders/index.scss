@@ -1,0 +1,85 @@
+@import "../../styles/mixins";
+@import "../../styles/themes";
+
+.insuranceProviders {
+  position: relative;
+  overflow: hidden;
+
+  &-art__container {
+    &--art1 {
+      position: absolute;
+      height: 50rem;
+      z-index: -9999;
+      top: -5rem;
+      left: -15rem;
+
+      @include respond(tab-land) {
+        left: -18rem;
+      }
+
+      @include respond(phone) {
+        top: -10rem;
+        left: -18rem;
+      }
+    }
+
+    &--art2 {
+      position: absolute;
+      overflow: hidden;
+      height: 80rem;
+      z-index: -9999;
+      top: 5rem;
+      right: -45rem;
+
+      @include respond(tab-land) {
+        right: -50rem;
+      }
+    }
+
+    &--art3 {
+      position: absolute;
+      height: 80rem;
+      z-index: -9999;
+      top: 35%;
+      left: -35%;
+
+      @include respond(tab-port) {
+        left: -60%;
+      }
+
+      @include respond(phone) {
+        top: 20%;
+        left: -110%;
+      }
+    }
+
+    &--art4 {
+      position: absolute;
+      height: 60rem;
+      z-index: -9999;
+      top: 80rem;
+      right: -30rem;
+
+      @include respond(phone) {
+        top: 125rem;
+      }
+    }
+  }
+
+  &__container {
+    margin: 15rem auto 5rem auto;
+    &--provider {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &-image {
+        padding: 5rem;
+
+        img {
+          height: 10rem;
+        }
+      }
+    }
+  }
+}

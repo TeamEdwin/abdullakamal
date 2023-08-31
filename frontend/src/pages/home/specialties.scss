@@ -1,0 +1,18 @@
+@import "../../styles/themes";
+@import "../../styles/grid";
+@import "../../styles/typography";
+@import "../../styles/components";
+
+.specialties {
+  text-align: center;
+  margin: 15rem auto !important;
+
+  &__text-box {
+    width: 60rem;
+    margin: 0 auto 5rem;
+
+    @include respond(phone) {
+      width: 40rem;
+    }
+  }
+}

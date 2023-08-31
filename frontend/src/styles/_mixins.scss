@@ -1,0 +1,55 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// MEDIA QUERY MANAGER
+/*
+-                 $breakpoint
+0     - 600px   : phone       = Phone
+600   - 900px   : tab-port    = Tablet portrait
+900   - 1200px  : tab-land    = Tablet landscape
+[1200 - 1800px] :             = Desktop - Is where our normal styles apply       
+1800+           : big-desktop = Big Desktop
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  // max-width 380px
+  @if $breakpoint == sm-phone {
+    @media only screen and (max-width: 23.75em) {
+      @content;
+    }
+  }
+
+  // max-width 600px
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  // max-width 900px
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  // max-width 1200px
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  // min-width 1800px
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

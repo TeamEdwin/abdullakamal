@@ -1,0 +1,169 @@
+@import "./themes";
+
+// Button Primary
+a.btn-primary {
+  &:link,
+  &:visited {
+    background-color: $color-primary;
+    color: $color-white;
+    display: inline-block;
+    padding: 0.8rem 5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 300ms;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primary-dark;
+    font-weight: 400;
+  }
+}
+
+a.btn-primary-small {
+  &:link,
+  &:visited {
+    background-color: $color-primary;
+    color: $color-white;
+    display: inline-block;
+    padding: 0.6rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 300ms;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primary-dark;
+    font-weight: 400;
+  }
+}
+
+// Button Secondary
+a.btn-secondary {
+  &:link,
+  &:visited {
+    background-color: $color-white;
+    display: inline-block;
+    padding: 0.8rem 5rem;
+    color: $color-primary;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0.3rem solid $color-primary;
+    outline-offset: -0.3rem;
+    transition-duration: 300ms;
+  }
+
+  &:hover,
+  &:active {
+    font-weight: 400;
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
+
+// Button - Package Price
+a.btn-packagePrice {
+  &:link,
+  &:visited {
+    background-color: $color-white;
+    display: inline-block;
+    margin: 1rem 0 2rem;
+    padding: 1.5rem 5rem;
+    color: $color-primary-dark;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    outline: 0.3rem solid $color-primary-dark;
+    outline-offset: -0.3rem;
+    transition-duration: 300ms;
+
+    span {
+      display: block;
+
+      &:first-child {
+        font-size: 2rem;
+        margin-bottom: -0.6rem;
+      }
+
+      &:last-child {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &:hover,
+  &:active {
+    font-weight: 400;
+    background-color: $color-primary-dark;
+    color: $color-white;
+  }
+}
+
+// Input Buttons - Submit, Reset
+input[type="button"].btn-primary,
+input[type="submit"].btn-primary,
+input[type="reset"].btn-primary {
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.8rem 5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition-duration: 300ms;
+
+  &:hover,
+  &:active {
+    background-color: $color-primary-dark;
+    font-weight: 400;
+  }
+
+  &:disabled {
+    background: $color-gray-secondary;
+  }
+}
+
+// Input Field - Text, Tel, Email, Date Picker
+input[type="text"].akmc-input,
+input[type="tel"].akmc-input,
+input[type="email"].akmc-input,
+input[type="password"].akmc-input,
+input[type="date"].akmc-input,
+input[type="time"].akmc-input,
+textarea.akmc-input,
+select.akmc-input {
+  background-color: $color-white;
+  color: $color-gray;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  width: 100%;
+  border: 1px solid $color-purple;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1.5rem 0.3rem;
+  outline-color: $color-purple;
+
+  &:disabled {
+    color: $color-gray-light;
+  }
+}

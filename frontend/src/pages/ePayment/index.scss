@@ -1,0 +1,230 @@
+@import "../../styles/themes";
+@import "../../styles/mixins";
+
+.ePayment {
+  position: relative;
+  overflow: hidden;
+
+  &-art__container {
+    &--art1 {
+      position: absolute;
+      overflow: hidden;
+      height: 75rem;
+      z-index: -9999;
+      top: -15rem;
+      right: -30rem;
+
+      @include respond(tab-land) {
+        height: 65rem;
+        right: -40rem;
+      }
+    }
+    &--art2 {
+      position: absolute;
+      overflow: hidden;
+      height: 70rem;
+      z-index: -9999;
+      top: -35rem;
+      right: -30rem;
+
+      @include respond(tab-land) {
+        height: 65rem;
+        right: -35rem;
+      }
+    }
+
+    &--art3 {
+      position: absolute;
+      height: 50rem;
+      z-index: -9999;
+      bottom: -10rem;
+      left: -15rem;
+
+      @include respond(tab-land) {
+        height: 40rem;
+        left: -18rem;
+      }
+
+      @include respond(phone) {
+        left: -18rem;
+      }
+    }
+  }
+
+  &__personalInfo {
+    background-color: $color-primary-dark;
+    margin: 10rem 0 5rem;
+    padding: 6rem 10rem;
+
+    @include respond(tab-port) {
+      padding: 8rem;
+    }
+
+    @include respond(phone) {
+      padding: 5rem 3rem;
+      margin-bottom: 2rem;
+    }
+
+    &--desc {
+      font-size: 1.3rem;
+      margin-bottom: 5rem;
+    }
+
+    &--form {
+      &-group {
+        label {
+          margin-bottom: 3rem;
+          display: flex;
+          flex-direction: row;
+
+          @include respond(phone) {
+            flex-direction: column;
+          }
+
+          span.label {
+            min-width: 15rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__service {
+    padding: 2rem 10rem;
+
+    @include respond(tab-port) {
+      padding: 8rem;
+    }
+
+    @include respond(phone) {
+      padding: 5rem 3rem;
+    }
+
+    &--desc {
+      font-size: 1.3rem;
+      margin-bottom: 5rem;
+    }
+
+    &--select {
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: row;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+
+      label {
+        min-width: 18rem;
+      }
+
+      &-menu {
+        flex: 1;
+
+        @include respond(phone) {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    &--date {
+      label {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+
+        @include respond(phone) {
+          flex-direction: column;
+        }
+
+        span.label {
+          min-width: 18rem;
+        }
+      }
+    }
+  }
+
+  &__paymentInfo {
+    padding: 2rem 10rem;
+
+    @include respond(tab-port) {
+      padding: 8rem;
+    }
+
+    @include respond(phone) {
+      padding: 5rem 3rem;
+    }
+
+    &--desc {
+      font-size: 1.3rem;
+      margin-bottom: 5rem;
+    }
+
+    &--form {
+      &-group {
+        label {
+          margin-bottom: 3rem;
+          display: flex;
+          flex-direction: row;
+
+          @include respond(phone) {
+            flex-direction: column;
+          }
+
+          span.label {
+            min-width: 18rem;
+          }
+        }
+      }
+    }
+
+    &--select {
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: row;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+
+      label {
+        min-width: 18rem;
+      }
+
+      &-menu {
+        flex: 1;
+
+        @include respond(phone) {
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    &--date {
+      label {
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: row;
+
+        @include respond(phone) {
+          flex-direction: column;
+        }
+
+        span.label {
+          min-width: 18rem;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding-right: 5rem;
+    margin: 0 0 10rem;
+    text-align: right;
+
+    @include respond(phone) {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+}

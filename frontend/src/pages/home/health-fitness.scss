@@ -1,0 +1,35 @@
+@import "../../styles/themes";
+@import "../../styles/grid";
+@import "../../styles/typography";
+@import "../../styles/components";
+
+.healthFitness {
+  background-color: rgb(134, 70, 155);
+  color: $color-white;
+  padding: 10rem 0;
+
+  &__body {
+    margin: 4rem 0 6rem;
+    display: flex;
+    flex-direction: row;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    ul {
+      font-size: 2rem;
+      margin: 0 auto;
+      column-count: 2;
+
+      @include respond(phone) {
+        margin-left: 5rem;
+        column-count: 1;
+      }
+
+      li {
+        margin-right: 5rem;
+      }
+    }
+  }
+}

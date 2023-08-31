@@ -1,0 +1,73 @@
+@import "../../styles/themes";
+
+.notfoundContainer {
+  position: relative;
+  height: 100vh;
+}
+
+.notfoundContainer .notfound {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound {
+  max-width: 92rem;
+  width: 100%;
+  line-height: 1.4;
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.notfound .notfound-404 {
+  position: absolute;
+  height: 10rem;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+  color: $color-gray-light;
+  font-weight: 900;
+  font-size: 27.6rem;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.notfound h2 {
+  font-size: 4.6rem;
+  color: $color-purple;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.notfound p {
+  font-size: 1.6rem;
+  color: $color-purple;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
+
+@media only screen and (max-width: 48rem) {
+  .notfound .notfound-404 h1 {
+    font-size: 16.2rem;
+  }
+  .notfound h2 {
+    font-size: 2.6rem;
+  }
+}

@@ -1,0 +1,47 @@
+@import "./mixins";
+@import "./themes";
+@import "./typography";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Desired 10px, Default 16px = 10/16 = 0.625x100 = 62.5% */
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 12px/16px
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 9px/16px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 8px/16px
+  }
+}
+
+body {
+  font-family: "Poppins", "Noto Sans Arabic", sans-serif;
+  font-size: $font-size-default;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $color-gray;
+
+  @media screen and (min-width: 56.25em) {
+    // Used in Header Navigation toggle
+    overflow-y: scroll !important;
+  }
+}
+
+::selection {
+  background-color: $color-purple;
+  color: $color-white;
+}

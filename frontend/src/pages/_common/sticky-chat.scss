@@ -1,0 +1,160 @@
+@import "../../styles/themes";
+@import "../../styles/grid";
+@import "../../styles/typography";
+@import "../../styles/components";
+
+.chat-icon {
+  height: 8rem;
+  width: 8rem;
+  background-color: $color-primary-dark;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 6%;
+  right: 5%;
+  z-index: 2000;
+
+  box-shadow: $box-shadow-light;
+  -webkit-box-shadow: $box-shadow-light;
+  -moz-box-shadow: $box-shadow-light;
+
+  @include respond(phone) {
+    bottom: 4%;
+  }
+
+  &__container {
+    .icon__chat {
+      fill: $color-white;
+      padding: 2rem;
+      height: 8rem;
+      cursor: pointer;
+    }
+
+    .whatsapp-container {
+      display: none;
+      background-color: white;
+      z-index: 100;
+      margin-bottom: 6rem;
+      width: 36rem;
+      position: fixed !important;
+      bottom: 8rem;
+      right: 5rem;
+      border-radius: 1rem;
+      box-shadow: 0.2rem 0.2rem 0.6rem rgb(0 0 0 / 40%);
+
+      &__header {
+        height: 10rem;
+        max-height: 10rem;
+        min-height: 10rem;
+        background-color: #0a5f54;
+        color: white;
+        border-radius: 1rem 1rem 0rem 0rem;
+        display: flex;
+        align-items: center;
+
+        &-logo {
+          margin-left: 2rem;
+          width: 5rem;
+          height: 5rem;
+          border-radius: 2.5rem;
+          box-shadow: 0.2rem 0.2rem 0.6rem rgb(0 0 0 / 40%);
+        }
+
+        &-text {
+          margin-left: 2rem;
+
+          &-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 2rem;
+          }
+
+          &-subtitle {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+            margin-top: 0.4rem;
+          }
+        }
+
+        &-close-btn {
+          cursor: pointer;
+          position: absolute;
+          right: 2rem;
+          top: 2rem;
+
+          img {
+            vertical-align: middle;
+            border-style: none;
+          }
+        }
+      }
+
+      &__body {
+        background: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+
+        &--chat {
+          background-color: white;
+          display: inline-block;
+          margin: 2rem;
+          padding: 1rem;
+          border-radius: 1rem;
+
+          &-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.8rem;
+            color: rgba(0, 0, 0, 0.4);
+          }
+
+          &-welcome {
+            color: $color-black;
+            direction: ltr;
+          }
+
+          body[dir="rtl"] &-welcome {
+            color: $color-black;
+            direction: rtl;
+          }
+        }
+      }
+
+      &__footer {
+        background-color: white;
+
+        .send-btn {
+          text-decoration: none;
+          color: rgb(255, 255, 255) !important;
+          font-size: 1.5rem;
+          font-weight: 700;
+          line-height: 2rem;
+          cursor: pointer;
+          position: relative;
+          display: flex;
+          -webkit-box-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          // -webkit-appearance: none;
+          padding: 0.8rem 1.2rem;
+          border-radius: 2.5rem;
+          border-width: initial;
+          border-style: none;
+          border-color: initial;
+          border-image: initial;
+          background-color: #4dc247 !important;
+          margin: 2rem;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+body[dir="rtl"] .chat-icon {
+  right: auto;
+  left: 5%;
+
+  .whatsapp-container {
+    right: auto;
+    left: 5rem;
+  }
+}

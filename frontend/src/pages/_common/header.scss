@@ -1,0 +1,274 @@
+@import "../../styles/themes";
+@import "../../styles/mixins";
+
+.header {
+  background-color: $color-white;
+  text-align: center;
+  box-shadow: 0 0 0.3rem $color-gray;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 4000;
+
+  @media screen and (min-width: 56.25em) {
+    position: relative;
+  }
+
+  .akmcHeaderDetails {
+    background-image: linear-gradient(
+      to right,
+      rgba($color-primary-dark, 0.8),
+      rgba($color-secondary, 0.8)
+    );
+    color: $color-white;
+
+    @include respond(tab-port) {
+      background-image: linear-gradient(
+        rgba($color-primary-dark, 0.8),
+        rgba($color-secondary, 0.8)
+      );
+    }
+
+    .header__container {
+      padding: 0.5rem 0.7rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &__address,
+    &__phone-1,
+    &__phone-2,
+    &__phone-3,
+    &__lang-btn {
+      display: flex;
+      align-items: center;
+
+      .akmcHeaderDetails__content {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__phone {
+      display: flex;
+
+      @include respond(phone) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      @include respond(phone) {
+        margin-top: 0.5rem;
+      }
+    }
+
+    body[dir="ltr"] &__phone-1,
+    body[dir="ltr"] &__phone-2,
+    body[dir="ltr"] &__phone-3 {
+      padding-right: 2rem;
+
+      @include respond(phone) {
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    body[dir="rtl"] &__phone-1,
+    body[dir="rtl"] &__phone-2,
+    body[dir="rtl"] &__phone-3 {
+      padding-left: 2rem;
+
+      @include respond(phone) {
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    &__lang-btn {
+      button {
+        background-color: transparent;
+        border: 0.1rem solid $color-white;
+        color: $color-white;
+        padding: 0.4rem 0.8rem;
+        text-decoration: none;
+        transition-duration: 300ms;
+
+        &:hover {
+          background-color: $color-white;
+          border: 0.1rem solid $color-white;
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 128rem;
+  }
+
+  &__logo-box {
+    // padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: -1.76rem;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-self: stretch;
+
+    @media screen and (min-width: 56.25em) {
+      justify-content: center;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 0;
+      padding: 2rem 1.5rem 0.75rem 2.5rem;
+    }
+
+    @include respond(phone) {
+      padding: 1.75rem 2rem 1.2rem 2.2rem;
+    }
+
+    &--logo-img {
+      height: 11rem;
+
+      @include respond(tab-port) {
+        height: 6rem;
+      }
+
+      @include respond(phone) {
+        height: 4.5rem;
+      }
+    }
+
+    &--toggle {
+      @media screen and (min-width: 56.25em) {
+        display: none;
+      }
+    }
+  }
+
+  .navigation {
+    transition: 0.5s;
+    background-color: $color-white;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+    }
+
+    &__item {
+      padding: 1.8rem 1.8rem 1.8rem 0;
+      position: relative;
+
+      &:hover .dropdown-content {
+        @media screen and (min-width: 56.25em) {
+          display: block;
+        }
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: $color-primary-dark;
+        min-width: 16rem;
+        box-shadow: 0rem 0.8rem 1.6rem 0rem rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition-duration: 300ms;
+
+        a {
+          font-size: 1.4rem;
+          color: $color-white;
+          padding: 1.2rem 1.6rem;
+          text-decoration: none;
+          display: block;
+          transition-duration: 300ms;
+
+          &:hover {
+            background-color: $color-primary;
+          }
+        }
+      }
+    }
+
+    &__link {
+      padding: 1.3rem;
+      font-size: 1.6rem;
+      color: $color-gray;
+      text-decoration-color: transparent;
+      transition: 300ms ease;
+
+      &:hover {
+        color: $color-gray;
+        text-decoration: underline;
+        transition: 300ms ease;
+      }
+    }
+  }
+}
+
+body[dir="ltr"] .akmcHeaderDetails__icon {
+  margin-right: 0.8rem;
+}
+
+body[dir="rtl"] .akmcHeaderDetails__icon {
+  margin-left: 0.8rem;
+}
+
+a.btn-toggle {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    background-color: $color-white;
+    display: inline-block;
+    padding: 0.8rem 1.7rem;
+    color: $color-gray;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0.2rem solid $color-gray;
+    outline-offset: -0.3rem;
+    transition-duration: 300ms;
+  }
+}
+
+.openDrawerStyles {
+  display: none;
+  overflow: hidden;
+}
+
+.akmc-close-nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: -150px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh + 300px);
+  z-index: 3000;
+
+  opacity: 0;
+  visibility: hidden;
+}

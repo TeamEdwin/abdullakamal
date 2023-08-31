@@ -1,0 +1,77 @@
+@import "../../styles/themes";
+@import "../../styles/grid";
+@import "../../styles/typography";
+@import "../../styles/components";
+
+.side-nav {
+  height: 30rem;
+  width: 6rem;
+  background-color: $color-primary-dark;
+  border-radius: 2rem 0 0 2rem;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  z-index: 1000;
+
+  box-shadow: $box-shadow-light;
+  -webkit-box-shadow: $box-shadow-light;
+  -moz-box-shadow: $box-shadow-light;
+
+  &__container {
+    margin: 0.5rem auto;
+
+    hr {
+      margin: 0 0.8rem;
+      width: 4.5rem;
+      border: none;
+      border-bottom: 1px solid $color-white;
+    }
+  }
+}
+
+body[dir="rtl"] .side-nav {
+  border-radius: 0 2rem 2rem 0;
+  top: 50%;
+  right: auto;
+  left: 0;
+}
+
+.icon {
+  fill: $color-white;
+  height: 6.5rem;
+  padding: 1.3rem;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  min-width: 23rem;
+  background-color: $color-white;
+  color: $color-gray;
+  text-align: center;
+  border-radius: 1.6rem;
+  padding: 0.2rem 0;
+  box-shadow: $box-shadow-light;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  right: 120%;
+}
+
+body[dir="rtl"] .tooltiptext {
+  right: auto;
+  left: 120%
+}
+
+.tooltip:hover {
+  .tooltiptext {
+    visibility: visible;
+  }
+}

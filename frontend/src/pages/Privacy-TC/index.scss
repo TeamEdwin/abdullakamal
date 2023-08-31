@@ -1,0 +1,12 @@
+.privacy-tc {
+  &-container {
+    min-height: 50rem;
+  }
+  &-title {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  &-text {
+    white-space: pre-wrap;
+  }
+}

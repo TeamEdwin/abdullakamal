@@ -1,0 +1,45 @@
+{
+  "name": "akmc-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.32.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.6",
+    "dotenv": "^16.0.1",
+    "email-templates": "^10.0.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.1",
+    "express-paginate": "^1.0.2",
+    "express-validator": "^6.14.2",
+    "http-proxy-middleware": "^2.0.6",
+    "i18next": "^22.0.4",
+    "i18next-fs-backend": "^2.0.0",
+    "i18next-http-middleware": "^3.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
+    "mongoose-unique-validator": "^3.1.0",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^4.0.0",
+    "nodemailer": "^6.7.8",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7",
+    "slugify": "^1.6.5",
+    "swagger-ui-express": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../../styles/mixins";
+
+.quill {
+  &__titleInput {
+    margin-bottom: 2rem !important;
+  }
+
+  &__container .ql-editor {
+    min-height: 20rem;
+  }
+
+  .ql-container {
+    font-size: 1.6rem;
+  }
+
+  .ql-tooltip {
+    top: 0 !important;
+    left: 30rem !important;
+
+    @include respond(tab-land) {
+      left: -4rem !important;
+    }
+  }
+}
