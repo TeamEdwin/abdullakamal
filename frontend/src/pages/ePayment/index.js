@@ -38,7 +38,7 @@ const EPayment = () => {
       e.preventDefault();
       document.title = "E-Payment - Dr. Abdulla Kamal Medical Centre";
 
-      const url = "http://localhost:8000/api/create-session";
+      const url = `${process.env.REACT_APP_BACKEND_URL}/api/create-session`;
 
       // generate random number for order id
       const order_id = "#" + Math.floor(Math.random() * 10000);
@@ -70,8 +70,8 @@ const EPayment = () => {
           interaction: {
             operation: "PURCHASE",
             timeout: 600,
-            timeoutUrl: "http://localhost:3000/e-payment",
-            cancelUrl: "http://localhost:3000/e-payment",
+            timeoutUrl: `${process.env.REACT_APP_FRONTEND_URL}/e-payment`,
+            cancelUrl: `${process.env.REACT_APP_FRONTEND_URL}/e-payment`,
             merchant: {
               name: "APSHAR CONSULTANCY W.L.L",
               url: "https://developer.mastercard.com",
