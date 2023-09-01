@@ -70,6 +70,7 @@ const EPayment = () => {
           interaction: {
             operation: "PURCHASE",
             timeout: 600,
+            returnUrl: `${process.env.REACT_APP_FRONTEND_URL}/payment-success`,
             timeoutUrl: `${process.env.REACT_APP_FRONTEND_URL}/e-payment`,
             cancelUrl: `${process.env.REACT_APP_FRONTEND_URL}/e-payment`,
             merchant: {

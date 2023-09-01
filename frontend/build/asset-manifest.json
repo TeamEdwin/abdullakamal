@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6cd5e9f2.css",
-    "main.js": "/static/js/main.52e790bc.js",
+    "main.js": "/static/js/main.739c9da9.js",
     "static/media/pexels-artem-podrez-5726835.jpg": "/static/media/pexels-artem-podrez-5726835.ca22c81669755b8e5eca.jpg",
     "static/media/pexels-karolina-grabowska-4021779.jpg": "/static/media/pexels-karolina-grabowska-4021779.9cc8cc4b1e3b41a6ba22.jpg",
     "static/media/artwork-group-247.png": "/static/media/artwork-group-247.711859d57bd3e7c57d71.png",
@@ -38,18 +38,18 @@
     "static/media/icon_card.svg": "/static/media/icon_card.50e75c31d65a2849f5e81e3a7f22ada1.svg",
     "static/media/icon_chat.svg": "/static/media/icon_chat.91dff4c6f82798afcbbf6ecd00ac8dd2.svg",
     "static/media/icon_stethoscope.svg": "/static/media/icon_stethoscope.c177566cffc7c34dbf544b14216fff7a.svg",
-    "index.html": "/index.html",
     "static/media/icon_users.svg": "/static/media/icon_users.c39af7c2dff7f6c9d81cedc0f65669c6.svg",
+    "index.html": "/index.html",
     "static/media/icon_user.svg": "/static/media/icon_user.a4b11673704013310100a624b46dc6e2.svg",
     "static/media/icon_package1.svg": "/static/media/icon_package1.c97eab95821441ae590aac1d6a527dbd.svg",
     "static/media/tiktok.svg": "/static/media/tiktok.92196bd2869582141b8a93a0482d26c3.svg",
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "static/media/bh.svg": "/static/media/bh.d6e3bed59974f2b0aeddc9c6cd16d825.svg",
     "main.6cd5e9f2.css.map": "/static/css/main.6cd5e9f2.css.map",
-    "main.52e790bc.js.map": "/static/js/main.52e790bc.js.map"
+    "main.739c9da9.js.map": "/static/js/main.739c9da9.js.map"
   },
   "entrypoints": [
     "static/css/main.6cd5e9f2.css",
-    "static/js/main.52e790bc.js"
+    "static/js/main.739c9da9.js"
   ]
 }

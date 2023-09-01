@@ -29,10 +29,6 @@
     -->
     <script
       src="https://eazypay.gateway.mastercard.com/static/checkout/checkout.min.js"
-      data-cancel="cancelCallback"
-      data-error="errorCallback"
-      data-complete="completeCallback"
-      data-timeout="timeoutCallback"
       data-beforeRedirect="Checkout.saveFormFields"
       data-afterRedirect="Checkout.restoreFormFields"
     ></script>
@@ -53,20 +49,5 @@
     -->
   </body>
   <script>
-    function cancelCallback() {
-      window.location.href = "/e-payment";
-    }
-
-    function errorCallback(error) {
-      alert(JSON.stringify(error));
-    }
-
-    function completeCallback() {
-      // get the payment response
-      var paymentResponse = Checkout.configure().getPaymentResponse();
-      console.log(paymentResponse);
-      // redirect to the receipt page
-      window.location.href = "/payment-success";
-    }
   </script>
 </html>
