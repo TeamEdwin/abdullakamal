@@ -9,9 +9,9 @@ const createSession = async (req, res) => {
   try {
     const data = req.body; // Assuming you're receiving the necessary data in the request body
     const url =
-      "https://eazypay.gateway.mastercard.com/api/rest/version/74/merchant/40011032/session";
-    const username = "merchant.40011032";
-    const password = "8c655cceb10258397405d7a4744c42ca";
+      "https://eazypay.gateway.mastercard.com/api/rest/version/74/merchant/40011669/session";
+    const username = "merchant.40011669";
+    const password = "bba29a5a8f4c900eb6e4e2c7e533f16a";
     const authHeader = `Basic ${Buffer.from(`${username}:${password}`).toString(
       "base64"
     )}`;

@@ -74,7 +74,7 @@ const EPayment = () => {
             timeoutUrl: `${process.env.REACT_APP_FRONTEND_URL}/e-payment`,
             cancelUrl: `${process.env.REACT_APP_FRONTEND_URL}/e-payment`,
             merchant: {
-              name: "APSHAR CONSULTANCY W.L.L",
+              name: "DR ABDULLA KAMAL MEDICAL CENTRE W.L.L",
               url: "https://developer.mastercard.com",
             },
             displayControl: {
