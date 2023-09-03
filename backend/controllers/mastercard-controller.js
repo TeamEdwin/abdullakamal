@@ -8,10 +8,9 @@ sgMail.setApiKey(process.env.SENDGRID_KEY);
 const createSession = async (req, res) => {
   try {
     const data = req.body; // Assuming you're receiving the necessary data in the request body
-    const url =
-      "https://eazypay.gateway.mastercard.com/api/rest/version/74/merchant/40011669/session";
-    const username = "merchant.40011669";
-    const password = "bba29a5a8f4c900eb6e4e2c7e533f16a";
+    const url = process.env.MASTERCARD_URL;
+    const username = process.env.MASTERCARD_USERNAME;
+    const password = process.env.MASTERCARD_PASSWORD;
     const authHeader = `Basic ${Buffer.from(`${username}:${password}`).toString(
       "base64"
     )}`;
@@ -52,6 +51,7 @@ const createSession = async (req, res) => {
   }
 };
 
+// CREATE - PACKAGE SERVICE PURCHASED
 const purchagedPackage = async (req, res) => {
   try {
     const body = req.body;
@@ -146,7 +146,37 @@ const purchagedPackage = async (req, res) => {
   }
 };
 
+// READ ALL - PACKAGE SERVICE Purchased
+const getAllPurchagedPackage = async (req, res) => {
+  try {
+    const [results, itemCount] = await Promise.all([
+      PackagePurchased.find({})
+        .sort({ createdAt: "ascending" })
+        .select({ __v: 0, createdAt: 0, updatedAt: 0 })
+        .skip(req.skip)
+        .lean()
+        .exec(),
+      PackagePurchased.count({}),
+    ]);
+    const pageCount = Math.ceil(itemCount / req.query.limit);
+
+    return res.status(201).json({
+      object: "list",
+      data: results,
+      pageCount,
+      itemCount,
+      currentPage: req.query.page,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      message: err.message,
+      success: false,
+    });
+  }
+};
+
 module.exports = {
   createSession,
   purchagedPackage,
+  getAllPurchagedPackage,
 };

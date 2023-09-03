@@ -115,7 +115,7 @@ export default function DataTable() {
   };
 
   const getDataFromDB = async () => {
-    const url = `${process.env.REACT_APP_BACKEND_URL}/api/appointment`;
+    const url = `${process.env.REACT_APP_BACKEND_URL}/api/purchased-packages`;
     const options = {
       method: "GET",
       url: url,
@@ -126,6 +126,8 @@ export default function DataTable() {
     await Axios(options)
       .then((response) => {
         // setClickData(response.data.appointments);
+        setClickData(response.data.data);
+        console.log("Purchased Packages:", response);
       })
       .catch((error) => console.log(error));
   };
@@ -142,10 +144,14 @@ export default function DataTable() {
           <Table sx={{ minWidth: 500 }} size="small">
             <TableHead>
               <TableRow>
-                <TableCell>Appointment</TableCell>
-                <TableCell>Patient Name</TableCell>
+                <TableCell>Order ID</TableCell>
+                <TableCell>Amount Paid</TableCell>
                 <TableCell>Email</TableCell>
-                <TableCell>Phone</TableCell>
+                <TableCell>Name</TableCell>
+                <TableCell>Mobile</TableCell>
+                <TableCell>Doctor</TableCell>
+                <TableCell>Package</TableCell>
+                <TableCell>Variant</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -157,12 +163,14 @@ export default function DataTable() {
                 : clickData
               ).map((row, i) => (
                 <TableRow key={i}>
-                  <TableCell>{`${formatDate(
-                    row.appointmentDate
-                  )} | ${formatTime(row.appointmentTime)}`}</TableCell>
-                  <TableCell>{`${row.patientName}`}</TableCell>
-                  <TableCell>{`${row.patientName}`}</TableCell>
-                  <TableCell>{row.patientName}</TableCell>
+                  <TableCell>{row.order_id}</TableCell>
+                  <TableCell>{row.amount}</TableCell>
+                  <TableCell>{row.customer_email}</TableCell>
+                  <TableCell>{row.customer_name}</TableCell>
+                  <TableCell>{row.customer_phone}</TableCell>
+                  <TableCell>{row.doctor_id}</TableCell>
+                  <TableCell>{row.package_id}</TableCell>
+                  <TableCell>{row.variant_id}</TableCell>
                 </TableRow>
               ))}
 
@@ -176,7 +184,7 @@ export default function DataTable() {
               <TableRow>
                 <TablePagination
                   rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
-                  colSpan={4}
+                  colSpan={9}
                   count={clickData.length}
                   rowsPerPage={rowsPerPage}
                   page={page}
