@@ -152,7 +152,7 @@
     "label_form_doctorName": "اسم الطبيب:",
     "label_form_appointmentDate": "تاريخ الموعد:*",
     "label_form_appointmentTime": "وقت الموعد:*",
-    "label_btn_checkAvailability": "التحقق من الصلاحية"
+    "label_btn_bookAppointment": "موعد الكتاب"
   },
   "blog": {
     "label_whatsHot": "مشاركة مدونة حديثة",

@@ -102,7 +102,6 @@ const AKMCHeader = () => {
           i18n.changeLanguage("en");
         }}
       >
-        <FlagUS style={{ height: "1.3rem", marginLeft: "0.5rem" }} />
         English
       </button>
     </span>
@@ -116,7 +115,6 @@ const AKMCHeader = () => {
           i18n.changeLanguage("ar");
         }}
       >
-        <FlagBH style={{ height: "1.3rem", marginRight: "0.5rem" }} />
         العربية
       </button>
     </span>
@@ -207,7 +205,7 @@ const AKMCHeader = () => {
                 </span>
               </span>
               <span className="akmcHeaderDetails__phone">
-                <span>
+                {/* <span> */}
                   <span
                     style={{
                       display: "flex",
@@ -278,7 +276,8 @@ const AKMCHeader = () => {
                       </span>
                     </span>
                   </span>
-                  <span
+                  {/* Addition Phone Numbers */}
+                  {/* <span
                     style={{
                       display: "flex",
                       flexWrap: "wrap",
@@ -340,13 +339,13 @@ const AKMCHeader = () => {
                         </a>
                       </span>
                     </span>
-                  </span>
-                </span>
+                  </span> */}
                 {/* Arabic Language Switcher  */}
                 {i18n.resolvedLanguage === "ar"
                   ? englishSwitchButton
                   : arabicSwitchButton}
-              </span>
+                </span>
+              {/* </span> */}
             </div>
           )}
         </div>

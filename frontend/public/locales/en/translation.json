@@ -152,7 +152,7 @@
     "label_form_doctorName": "Doctor's Name:",
     "label_form_appointmentDate": "Appointment Date:*",
     "label_form_appointmentTime": "Appointment Time:*",
-    "label_btn_checkAvailability": "CHECK AVAILABILITY"
+    "label_btn_bookAppointment": "BOOK APPOINTMENT"
   },
   "blog": {
     "label_whatsHot": "What's Hot",

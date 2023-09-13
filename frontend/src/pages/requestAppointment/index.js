@@ -443,7 +443,7 @@ const RequestAppointment = () => {
             <div className="requestAppointment__footer">
               <input
                 type="submit"
-                value={`${t("requestAppointment.label_btn_checkAvailability")}`}
+                value={`${t("requestAppointment.label_btn_bookAppointment")}`}
                 className="btn-primary"
               />
             </div>

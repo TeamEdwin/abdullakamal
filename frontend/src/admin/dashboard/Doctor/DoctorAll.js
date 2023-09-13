@@ -52,7 +52,7 @@ const DoctorAll = () => {
                     <Box sx={{ alignItems: "center", display: "flex" }}>
                       <Avatar src={row.imageUrl} sx={{ mr: 2 }}></Avatar>
                       <Typography color="textPrimary" variant="body1">
-                        <Link to={`${row._id}/edit`} className="table__link">
+                        <Link to={`/dashboard/doctor/${row._id}/edit`} className="table__link">
                           {row["en-US"].firstname} {row["en-US"].lastname}
                         </Link>
                       </Typography>
