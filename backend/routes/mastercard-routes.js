@@ -21,11 +21,8 @@ router.post("/purchased-packages", async (req, res) => {
 });
 
 // READ ALL - PACKAGE SERVICE Purchased
-router.get(
-  "/purchased-packages",
-  async (req, res) => {
-    await getAllPurchagedPackage(req, res);
-  }
-);
+router.get("/purchased-packages", async (req, res) => {
+  await getAllPurchagedPackage(req, res);
+});
 
 module.exports = router;
