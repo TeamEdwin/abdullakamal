@@ -68,7 +68,8 @@ const purchagedPackage = async (req, res) => {
 
     await newRecord.save();
 
-    const message = `<table class="table-wrap is-billing">
+    const message = `
+<table class="table-wrap is-billing">
   <tr>
     <th><strong>Order Id</strong></th>
     <td>
@@ -119,7 +120,8 @@ const purchagedPackage = async (req, res) => {
       <p>${body.customer_phone}</p>
     </td>
   </tr>
-</table>`;
+</table>
+`;
 
     // send email to user
     const emailData = {
