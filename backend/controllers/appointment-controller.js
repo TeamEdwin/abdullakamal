@@ -12,7 +12,7 @@ const formatDate = (isoString) => {
 };
 
 const formatTime = (isoString) => {
-  return dayjs(isoString).format("hh:mmA");
+  return dayjs(isoString).add(5, "hours").add(30, "minutes").format("hh:mmA Z");
 };
 
 const createAppointment = async (req, res) => {

@@ -35,7 +35,7 @@ const Appointments = () => {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DatePicker
             views={["day"]}
-            label="Basic example"
+            label="Select Date"
             value={value}
             onChange={(newValue) => {
               setValue(newValue);
