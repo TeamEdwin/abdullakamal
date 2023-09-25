@@ -11,6 +11,10 @@ const formatDate = (isoString) => {
   return dayjs(isoString).format("MMM DD, YYYY");
 };
 
+const formatTime = (isoString) => {
+  return dayjs(isoString).format("hh:mmA");
+};
+
 const createAppointment = async (req, res) => {
   try {
     const { doctor, slot, patientName, patientPhone, patientEmail } = req.body;
@@ -103,7 +107,7 @@ const createAppointment = async (req, res) => {
         <p>Your appointment at Dr. Abdulla Kamal Medical Center is Booked Successfully. <br />
         <h4>Appointment Details </h4>
         Doctor's Name: ${appointmentData[0].doctorName[0]["en-US"].firstname} ${appointmentData[0].doctorName[0]["en-US"].lastname} <br />
-        Date / Time: ${appointmentData[0].appointmentDate} at ${appointmentData[0].appointmentStartTime} </br>
+        Date / Time: ${formatDate(appointmentData[0].appointmentDate)} at ${formatTime(appointmentData[0].appointmentStartTime)} </br>
         <p>We'll see you then!. </p>
         <p> Please visit the website for more information. </p>
         <p>Thank you<br />

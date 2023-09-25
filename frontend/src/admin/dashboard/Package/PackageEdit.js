@@ -118,6 +118,8 @@ const PackageEdit = () => {
   //   setDoctorName(value);
   //   console.log("doctorName", doctorName);
   // };
+  const [step, setStep] = useState(0.01);
+  const [eth, setEth] = useState(0);
 
   const handleMultiSelectAssociatedDoctors = async (event) => {
     setDoctorSelected(event);
@@ -515,6 +517,12 @@ const PackageEdit = () => {
                             label="Price"
                             name="variantPrice"
                             type="number"
+                            min={0}
+                            step={step}
+                            onChange={e => {
+                              setEth(e.target.value);
+                            }}
+                            value={eth}
                             variant="outlined"
                             size="small"
                           />

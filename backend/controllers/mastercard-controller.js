@@ -69,59 +69,18 @@ const purchagedPackage = async (req, res) => {
     await newRecord.save();
 
     const message = `
-<table class="table-wrap is-billing">
-  <tr>
-    <th><strong>Order Id</strong></th>
-    <td>
-      <p>
-        ${body.order_id}
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <th><strong>Amount</strong></th>
-    <td>
-      <p>${body.amount}</p>
-    </td>
-  </tr>
-  <tr>
-    <th><strong>Package</strong></th>
-    <td>
-      <p>${body.package_id}</p>
-    </td>
-  </tr>
-  <tr>
-    <th><strong>Variant</strong></th>
-    <td>
-      <p>${body.variant_id}</p>
-    </td>
-  </tr>
-  <tr>
-    <th><strong>Doctor</strong></th>
-    <td>
-      <p>${body.doctor_id}</p>
-    </td>
-  </tr>
-  <tr>
-    <th><strong>Your Email</strong></th>
-    <td>
-      <p>${body.customer_email}</p>
-    </td>
-  </tr>
-  <tr>
-    <th><strong>Name</strong></th>
-    <td>
-      <p>${body.customer_name}</p>
-    </td>
-  </tr>
-  <tr>
-    <th><strong>Mobile Phone</strong></th>
-    <td>
-      <p>${body.customer_phone}</p>
-    </td>
-  </tr>
-</table>
-`;
+    <h3>Dear ${body.customer_name}</h3>
+        <p>Thank you for choosing Dr. Abdulla Kamal Medical Center<br />
+        Your package service is Purchased Successfully.</p><br />
+        <strong>Order ID:</strong> ${body.order_id}<br />
+        <strong>Amount:</strong> ${body.amount}<br />
+        <strong>Package ID:</strong> ${body.package_id}<br />
+        <strong>Variant ID:</strong> ${body.variant_id}<br />
+        <strong>Doctor ID:</strong> ${body.doctor_id}<br /><br />
+    <p>Please visit the website <a href="http://drabdullakamalclinic.com">www.drabdullakamalclinic.com</a> for more information. </p>
+    Thank you<br />
+    Dr. Abdulla Kamal Medical Center
+    `;
 
     // send email to user
     const emailData = {
@@ -153,8 +112,11 @@ const getAllPurchagedPackage = async (req, res) => {
   try {
     const [results, itemCount] = await Promise.all([
       PackagePurchased.find({})
-        .sort({ createdAt: "ascending" })
+        .sort({ createdAt: "descending" })
         .select({ __v: 0, createdAt: 0, updatedAt: 0 })
+        .populate("doctor_id", "en-US")
+        .populate("package_id", "en-US")
+        .populate("variant_id", "en-US")
         .skip(req.skip)
         .lean()
         .exec(),

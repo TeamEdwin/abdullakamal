@@ -168,9 +168,22 @@ export default function DataTable() {
                   <TableCell>{row.customer_email}</TableCell>
                   <TableCell>{row.customer_name}</TableCell>
                   <TableCell>{row.customer_phone}</TableCell>
-                  <TableCell>{row.doctor_id}</TableCell>
-                  <TableCell>{row.package_id}</TableCell>
-                  <TableCell>{row.variant_id}</TableCell>
+                  <TableCell>
+                    {row.package_id
+                      ? row.doctor_id["en-US"].firstname
+                      : "Doctor deleted!"}{" "}
+                    {row.package_id ? row.doctor_id["en-US"].lastname : ""}
+                  </TableCell>
+                  <TableCell>
+                    {row.package_id
+                      ? row.package_id["en-US"].title
+                      : "Package deleted"}
+                  </TableCell>
+                  <TableCell>
+                    {row.variant_id
+                      ? row.variant_id["en-US"].title
+                      : "Variant deleted"}
+                  </TableCell>
                 </TableRow>
               ))}
 
