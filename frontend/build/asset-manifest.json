@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6cd5e9f2.css",
-    "main.js": "/static/js/main.1ec41e68.js",
+    "main.js": "/static/js/main.eb525d2f.js",
     "static/media/pexels-artem-podrez-5726835.jpg": "/static/media/pexels-artem-podrez-5726835.ca22c81669755b8e5eca.jpg",
     "static/media/pexels-karolina-grabowska-4021779.jpg": "/static/media/pexels-karolina-grabowska-4021779.9cc8cc4b1e3b41a6ba22.jpg",
     "static/media/artwork-group-247.png": "/static/media/artwork-group-247.711859d57bd3e7c57d71.png",
@@ -46,10 +46,10 @@
     "static/media/getFetch.cjs": "/static/media/getFetch.40f37ddea2378391108f.cjs",
     "static/media/bh.svg": "/static/media/bh.d6e3bed59974f2b0aeddc9c6cd16d825.svg",
     "main.6cd5e9f2.css.map": "/static/css/main.6cd5e9f2.css.map",
-    "main.1ec41e68.js.map": "/static/js/main.1ec41e68.js.map"
+    "main.eb525d2f.js.map": "/static/js/main.eb525d2f.js.map"
   },
   "entrypoints": [
     "static/css/main.6cd5e9f2.css",
-    "static/js/main.1ec41e68.js"
+    "static/js/main.eb525d2f.js"
   ]
 }
