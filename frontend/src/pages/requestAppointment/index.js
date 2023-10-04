@@ -22,6 +22,12 @@ import artworkPath3025 from "../../assets/artworks/artwork-path-3025.png";
 import "./index.scss";
 import { useTranslation } from "react-i18next";
 
+var utc = require("dayjs/plugin/utc");
+var timezone = require("dayjs/plugin/timezone");
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
 const formatTime = (ISOTime) => {
   return dayjs(ISOTime).format("hh:mma");
 };
@@ -60,8 +66,6 @@ const RequestAppointment = () => {
     await Axios(options)
       .then((res) => {
         setDoctorDB(res.data.data);
-        // console.log(typeof res.data.data);
-        // console.log(Object.keys(res.data.data).length);
       })
       .catch((err) => {
         console.log(err);
@@ -78,7 +82,6 @@ const RequestAppointment = () => {
     await Axios(options)
       .then((res) => {
         setSlotsDB(res.data.data);
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -424,7 +427,15 @@ const RequestAppointment = () => {
                     </option>
                     {slotsDB && slotsDB.length > 0 ? (
                       slotsDB.map((item, i) => (
-                        <option value={item._id} key={i}>
+                        <option
+                          value={item._id}
+                          key={i}
+                          disabled={
+                            dayjs().diff(item.startTime, "hour") > 0
+                              ? "disabled"
+                              : ""
+                          }
+                        >
                           {formatTime(item.startTime)} -{" "}
                           {formatTime(item.endTime)}
                         </option>

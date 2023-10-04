@@ -41,7 +41,7 @@ import InputIcon from "react-multi-date-picker/components/input_icon";
 import "./index.scss";
 
 const formatDate = (isoString) => {
-  return dayjs(isoString).format("hh:mma Z");
+  return dayjs(isoString).format("hh:mma");
 };
 
 export const DoctorEdit = () => {

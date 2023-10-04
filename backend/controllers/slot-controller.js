@@ -4,6 +4,7 @@ const Doctor = require("../models/doctor");
 const Date = require("../models/date");
 const mongoose = require("mongoose");
 const AppointmentDate = require("../models/date");
+const dayjs = require("dayjs");
 
 const addSlot = async (req, res) => {
   try {
@@ -15,13 +16,19 @@ const addSlot = async (req, res) => {
     // const duration = endTime - startTime;
     // check if date exists
     const dateExists = await Date.findOne({ date: appointmentDate });
+    
+    const appointmentDateDayjs = dayjs(appointmentDate);
+    const appointmentStartTime = dayjs(startTime).set('date', appointmentDateDayjs.date()).set('month', appointmentDateDayjs.month()).format();
+    const appointmentEndTime = dayjs(endTime).set('date', appointmentDateDayjs.date()).set('month', appointmentDateDayjs.month()).format();
+
     if (dateExists) {
+      
       // check if slot exists
       const slotExists = await Slot.findOne({
         date: dateExists._id,
         doctor: doctor,
-        startTime: startTime,
-        endTime: endTime,
+        startTime: appointmentStartTime,
+        endTime: appointmentEndTime,
       });
       if (slotExists) {
         return res.status(400).json({
@@ -33,8 +40,8 @@ const addSlot = async (req, res) => {
       await Slot.create({
         date: dateExists._id,
         doctor,
-        startTime,
-        endTime,
+        startTime: appointmentStartTime,
+        endTime: appointmentEndTime,
       });
       return res.status(201).json({
         message: "Slot added successfully",
@@ -50,8 +57,8 @@ const addSlot = async (req, res) => {
     await Slot.create({
       date: newDate._id,
       doctor,
-      startTime,
-      endTime,
+      startTime: appointmentStartTime,
+      endTime: appointmentEndTime,
     });
     return res.status(201).json({
       message: "Slot added successfully",
@@ -73,8 +80,14 @@ const addSlotMultiple = async (req, res) => {
     // then create a new slot
     // if date is already there then create a new slot
     // convert time to ISO
-
+    
+    
     for (let i = 0; i < slotDates.length; i++) {
+      
+      const appointmentDateDayjs = dayjs(slotDates[i]);
+      const appointmentStartTime = dayjs(startTime).set('date', appointmentDateDayjs.date()).set('month', appointmentDateDayjs.month()).format();
+      const appointmentEndTime = dayjs(endTime).set('date', appointmentDateDayjs.date()).set('month', appointmentDateDayjs.month()).format();
+
       const date = await Date.findOne({
         date: slotDates[i],
       });
@@ -85,8 +98,8 @@ const addSlotMultiple = async (req, res) => {
         const slot = await Slot.findOne({
           date: date._id,
           doctor,
-          startTime,
-          endTime,
+          startTime: appointmentStartTime,
+          endTime: appointmentEndTime,
         });
         if (slot) {
           return res.status(400).json({
@@ -97,8 +110,8 @@ const addSlotMultiple = async (req, res) => {
         const newSlot = await Slot.create({
           date: date._id,
           doctor,
-          startTime,
-          endTime,
+          startTime: appointmentStartTime,
+          endTime: appointmentEndTime,
         });
       } else {
         const newDate = await Date.create({
@@ -107,8 +120,8 @@ const addSlotMultiple = async (req, res) => {
         const slot = await Slot.create({
           date: newDate._id,
           doctor,
-          startTime,
-          endTime,
+          startTime: appointmentStartTime,
+          endTime: appointmentEndTime,
         });
       }
     }
